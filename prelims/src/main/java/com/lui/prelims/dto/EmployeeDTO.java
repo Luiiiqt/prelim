@@ -1,9 +1,7 @@
 package com.lui.prelims.dto;
 
-
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import org.hibernate.validator.constraints.UniqueElements;
+import jakarta.validation.constraints.Email;
 
 public class EmployeeDTO {
 
@@ -12,8 +10,7 @@ public class EmployeeDTO {
     @NotBlank(message = "Name is required.")
     private String name;
 
-    @UniqueElements
-    @Valid
+    @Email
     @NotBlank(message = "Email is required.")
     private String email;
 
